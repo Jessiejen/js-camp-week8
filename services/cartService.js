@@ -94,7 +94,7 @@ async function emptyCart() {
   } catch (error) {
     return { success: false, error: error.message };
 }
-
+}
 /**
  * 計算購物車總金額
  * @returns {Promise<Object>}
@@ -109,7 +109,7 @@ async function getCartTotal() {
     finalTotal: cart.finalTotal, 
     itemCount: cart.carts.length, 
   };
-}
+  }
 
 /**
  * 顯示購物車內容
@@ -147,7 +147,7 @@ function displayCart(cart) {
   console.log(`商品總計：${formatCurrency(cart.total)}`);
   console.log(`折扣後金額：${formatCurrency(cart.finalTotal)}`);
   }
-}
+
 
 module.exports = {
   getCart,
